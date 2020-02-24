@@ -1,0 +1,26 @@
+{{#with article}}
+    <img class="banner" src="{{teaserImageURL}}">
+    <div id="info">
+        <p id="date">{{datePublished}}</p>
+        <script id="dateScript">
+            const dateElm = document.getElementById("date");
+            const date = new Date(dateElm.innerText * 1000);
+            const dateString = date.toLocaleString();
+            dateElm.innerText = dateString.substring(0, dateString.length - 3);
+        </script>
+        <h1>{{headline}}</h1>
+    </div>
+    <p class="paragraph teaser">{{teaserText}}</p>
+    {{#content}}
+        {{#if text}}
+            <p class="paragraph">{{text}}</p>
+        {{/if}}
+        {{#if image}}
+            <div class="image">
+                <img src="{{image}}">
+                <span class="caption">{{caption}}</span>
+            </div>
+        {{/if}}
+    {{/content}}
+    <p id="author">{{author}}</p>
+{{/with}}

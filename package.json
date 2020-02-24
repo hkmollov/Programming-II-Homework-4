@@ -1,0 +1,8 @@
+{
+  "name": "News",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "latest",
+    "express-handlebars": "latest"
+  }
+}
